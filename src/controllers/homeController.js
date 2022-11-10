@@ -1,4 +1,5 @@
-const Contato = require('../models/ContatoModel');
+const path = require('path');
+const Contato = require(path.resolve(__dirname, '..', 'models', 'ContatoModel'));
 
 exports.index = async(req, res) => {
   const contatos = await Contato.buscaContatos();
